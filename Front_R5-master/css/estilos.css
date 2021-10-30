@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+
+}
+/* Estilos index */
+#bodyIndex{
+    background-color: rgba(var(--bs-dark-rgb))!important;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-image: url("../img/mintic.svg");
+}
+.bodyform{
+  background-image: url("../img/mintic.svg"),url("../img/map.png");
+  background-repeat:repeat-y,repeat-y;
+  background-position-x:left,right;
+  background-position-y:center;
+  background-size: 30%,10rem;
+}
+
+.navbar {
+  padding: 0%;
+  padding-left: 50px;
+}
+
+.container {
+    width: 100%;
+    margin: auto;        
+}
+.consultar{
+    padding: 10px;
+}
+#columna1{
+    background: rgba(var(--bs-dark-rgb))!important;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+#columna2{
+    background: rgba(var(--bs-dark-rgb))!important;
+    padding-bottom: 100px;
+}
+
+footer {
+    background: rgb(221, 221, 221);
+    color: rgb(90, 90, 90);
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+    padding-top: 5%;
+    align-self: flex-end;
+}
+
+#titulo{
+  background: rgb(255, 255, 255);
+}
+/* Validacion campos input */
+  input {
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.25rem;
+  min-width: 125px;
+  padding: 0.5rem;
+  transition: border-color 0.5s ease-out;
+}
+input:optional {
+  border-color: gray;
+}
+input:required:valid {
+  border-color: green;
+}
+
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgb(255, 219, 205);
+  background-size: 25px;
+}
+
+  /* Validacion campos text area*/
+textarea {
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.25rem;
+  min-width: 125px;
+  padding: 0.5rem;
+  transition: border-color 0.5s ease-out;
+}
+textarea:optional {
+  border-color: gray;
+}
+textarea:required:valid {
+  border-color: green;
+}
+textarea:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+  background-size: 25px;
+}
+textarea:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgb(255, 219, 205);
+  background-size: 25px;
+}
+
+  /* Validacion campos text area*/
+  select {
+    border: 2px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: border-color 0.5s ease-out;
+  }
+  select:optional {
+    border-color: gray;
+  }
+  select:required:valid {
+    border-color: green;
+  }
+  select:required:focus:valid {
+    background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+    background-size: 25px;
+  }
+  select:focus:invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgb(255, 219, 205);
+    background-size: 25px;
+  }
+
+  /* Colores textos */
+#obli{
+    color: red;
+}
+#formaCorreo{
+  font-size: 15px;
+  color: grey;
+}
+
+/*  botones  */
+#btnEliminar:hover{
+  background-color: rgb(255, 147, 147);
+}
+#btnActualizar:hover{
+  background-color: rgb(255, 244, 87);
+}
+#btnCrear:hover{
+  background-color: rgb(152, 255, 157);
+  color: black;
+}
+#btnConsultar:hover{
+  background-color: rgb(91, 168, 255);
+  color: black;
+}
+
+/* diomedes */
+.wrap{
+	width: 800px;
+	max-width: 90%;
+	margin: 30px auto;
+}
+
+ul.tabs{
+	width: 100%;
+	background: rgba(var(--bs-dark-rgb))!important;
+	list-style: none;
+	display: flex;
+}
+
+ul.tabs li{
+	width: 18%;
+}
+
+ul.tabs li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	text-align: center;
+	display: block;
+	padding: 20px 0px;
+}
+
+.active{
+	background: #0984CC;
+}
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+
+.secciones{
+	width: 100%;
+	background: #fff;
+}
+
+.secciones article{
+	padding: 30px;
+}
+
+.secciones article p{
+	text-align: justify;
+}
+
+
+@media screen and (max-width: 700px){
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 450px){
+	ul.tabs li a{
+		padding: 15px 0px;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+	}
+
+	.secciones article{
+		padding: 20px;
+	}
+}
